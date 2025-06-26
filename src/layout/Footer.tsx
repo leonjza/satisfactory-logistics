@@ -1,13 +1,13 @@
+import { FeedbackButton } from '@/third-party/FeedbackButton';
+import { KofiSupportButton } from '@/third-party/KofiSupportButton';
 import { Anchor, Button, Container, Divider, Group, Text } from '@mantine/core';
 import { IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 import clsx from 'clsx';
-import { FeedbackButton } from '@/third-party/FeedbackButton';
-import { KofiSupportButton } from '@/third-party/KofiSupportButton';
 import classes from './Footer.module.css';
 
 const links = [
   {
-    link: 'https://github.com/rockfactory/satisfactory-logistics',
+    link: 'https://github.com/leonjza/satisfactory-logistics',
     label: 'GitHub',
     labelNode: (
       <Group gap="xs">
@@ -16,11 +16,10 @@ const links = [
       </Group>
     ),
   },
-  { link: 'mailto:info@satisfactory-logistics.xyz', label: 'Contact' },
   { link: '/privacy-policy', label: 'Privacy Policy' },
 ];
 
-export function Footer({ compact }: { compact?: boolean }) {
+export function Footer({ compact }: { compact?: boolean; }) {
   const items = links.map(link => (
     <Anchor<'a'>
       c="dimmed"
@@ -45,7 +44,7 @@ export function Footer({ compact }: { compact?: boolean }) {
         {/* <MantineLogo size={28} /> */}
         <Group>
           <Text size="sm" c="dimmed">
-            v{APP_VERSION} © {new Date().getFullYear()} Satisfactory Logistics
+            v{APP_VERSION} © {new Date().getFullYear()} Satisfactory Logistics (fork)
           </Text>
           <Group className={classes.links}>{items}</Group>
         </Group>

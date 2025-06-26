@@ -65,7 +65,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-function Redirect({ to }: { to: string }) {
+function Redirect({ to }: { to: string; }) {
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
@@ -90,7 +90,7 @@ export default function App() {
       <MantineProvider theme={theme} forceColorScheme="dark">
         <Modal
           opened
-          onClose={() => {}}
+          onClose={() => { }}
           closeOnClickOutside={false}
           closeOnEscape={false}
           withCloseButton={false}
@@ -143,7 +143,7 @@ export default function App() {
                     component="a"
                     href="https://discord.gg/Crd8r87dwY"
                   >
-                    Report on Discord
+                    Report on Discord, but keep in mind this is a fork.
                   </Button>
                 </Group>
               </Alert>
